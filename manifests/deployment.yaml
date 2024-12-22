@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cormorant
+  namespace: cormorant-namespace
+  labels:
+    app: cormorant
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cormorant
+  template:
+    metadata:
+      labels:
+        app: cormorant
+    spec:
+      containers:
+      - name: cormorant
+        image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/cormorant:latest
+        ports:
+        - containerPort: 80
