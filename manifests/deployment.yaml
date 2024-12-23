@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: cormorant
-        image: ghcr.io/${GITHUB_REPOSITORY_OWNER}/cormorant:latest
+        image: ghcr.io/drewpypro/cormorant:latest
         ports:
         - containerPort: 80
