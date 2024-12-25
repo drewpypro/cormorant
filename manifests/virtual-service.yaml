@@ -5,15 +5,10 @@ metadata:
   namespace: cormorant-namespace
 spec:
   hosts:
-    - "*"
+    - cormorant.drewpy.pro
   gateways:
     - istio-system/ingress-gateway
   http:
-    - match:
-        - uri:
-            prefix: "/cormorant"
-      rewrite:
-        uri: "/index.html"
       route:
         - destination:
             host: cormorant
