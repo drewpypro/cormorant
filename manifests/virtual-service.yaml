@@ -5,7 +5,7 @@ metadata:
   namespace: cormorant-namespace
 spec:
   hosts:
-    - cormorant.drewpy.pro
+    - cormorant-test.drewpy.pro
   gateways:
     - istio-ingress/ingress-gateway
   http:
